@@ -1,0 +1,61 @@
+Цикломатската комплексност на овој код е 7, истата ја добив преку броењето на if услови во кои имаше 6 и на тие додадов +1 и на крај вредноста ми излезе 7.
+
+Еvery Branch
+Празна листа
+
+Влезни податоци: allItems = null
+Очекуван резултат: RuntimeException
+Невалиден карактер во баркод
+
+Влезни податоци: Влезен предмет со невалиден карактер во баркод
+Очекуван резултат: RuntimeException
+Недостасува баркод
+
+Влезни податоци: Влезен предмет без баркод
+Очекуван резултат: RuntimeException
+Проверка на попуст
+
+Влезни податоци: Влезен предмет со попуст
+Очекуван резултат: Сумата се зголемува за вредноста на попустот
+Проверка на поголема цена и попуст за баркод започнува со '0'
+
+Влезни податоци: Влезен предмет со цена поголема од 300, попуст и баркод кој започнува со '0'
+Очекуван резултат: Сумата се намалува за 30
+Сите други случаи
+
+Влезни податоци: Сите останати влезни податоци
+Очекуван резултат: Враќање на true или false во зависност од условот sum <= payment
+
+
+Multiple Condition
+
+Тест случај 1: Празен корисник
+
+Влез: user = null, allUsers = []
+Тест случај 2: Корисник без лозинка
+
+Влез: user = new User("username", null, "email@example.com"), allUsers = []
+Тест случај 3: Корисник без email
+
+Влез: user = new User("username", "password123", null), allUsers = []
+Тест случај 4: Корисник без username
+
+Влез: user = new User(null, "password123", "email@example.com"), allUsers = []
+Тест случај 5: Важечки email, без постоечки корисници
+
+Влез: user = new User("username", "Password!123", "email@example.com"), allUsers = []
+Тест случај 6: Важечки email, постоечки корисници со ист email
+
+Влез: user = new User("username", "Password!123", "email@example.com"), allUsers = [new User("user1", "pass1", "email@example.com")]
+Тест случај 7: Важечки email, постоечки корисници со исто корисничко име
+
+Влез: user = new User("username", "Password!123", "email@example.com"), allUsers = [new User("username", "pass1", "email2@example.com")]
+Тест случај 8: Лозинка која содржи корисничко име
+
+Влез: user = new User("username", "username123", "email@example.com"), allUsers = []
+Тест случај 9: Лозинка пократка од 8 карактери
+
+Влез: user = new User("username", "Pass!1", "email@example.com"), allUsers = []
+Тест случај 10: Лозинка без специјални карактери
+
+Влез: user = new User("username", "Password123", "email@example.com"), allUsers = []
